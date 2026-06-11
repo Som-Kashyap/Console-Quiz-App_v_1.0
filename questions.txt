@@ -1,8 +1,0 @@
-
-OPERATOR PRECEDENCE IN C
-
-QUESTION SET - 1:
-
-question1: 2+4*3
-
-question2: 6+3*4/2
