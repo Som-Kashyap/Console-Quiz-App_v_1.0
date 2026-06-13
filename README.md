@@ -18,6 +18,11 @@
 - File-based storage (user-data and attempt history )
 
 ---
+## Demo:
+
+<img width="654" height="684" alt="quiz-app" src="https://github.com/user-attachments/assets/39b760e6-ccb6-4cd1-be78-73591964c733" />
+
+
 ## Technologies:
 - C  
 - Structures
