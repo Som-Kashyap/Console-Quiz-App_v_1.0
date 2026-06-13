@@ -18,11 +18,15 @@
 - File-based storage (user-data and attempt history )
 
 ---
-## Demo:
+## Demo 1: User Flow
 
 <img width="654" height="684" alt="quiz-app" src="https://github.com/user-attachments/assets/39b760e6-ccb6-4cd1-be78-73591964c733" />
 
+---
+## Demo 2: Attempt History System
+<img width="822" height="856" alt="quiz-app-history" src="https://github.com/user-attachments/assets/c73c7bcb-f7d7-407d-a7d4-e4814e173e2c" />
 
+---
 ## Technologies:
 - C  
 - Structures
