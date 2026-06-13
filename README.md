@@ -3,7 +3,8 @@
 ## Overview:
 - A console-based quiz application , a command-line application developed in C to help users master operator precedence. It features a menu-driven interface , role-based access for users and administrators , question management tools , score evaluation , and file-based persistence for storing quiz data and history.
 - The project emphasizes modular program design , structured data management , and practical use of core C programming concepts.
-- (in development phase)
+
+- (version 1.0)
 ---
 ## Features:
 - Menu driven interface
@@ -27,8 +28,6 @@
 ---
 
 ## Future Improvements:
-- User Profiles
-- Persistent Statistics
 - Random questions generation
 - Difficulty levels
 - Leaderboard
