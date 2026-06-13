@@ -20,13 +20,13 @@ enum operations {
 
 };
 
-void get_questions() {
+void get_questions() { //loads questions from questions.txt 
 
     FILE* fp;
     char buffer[100];
 
 
-    fp = fopen("questions.txt", "r");
+    fp = fopen("data/questions.txt", "r");
 
     if (!fp) {
 
@@ -47,6 +47,8 @@ void get_questions() {
 
 void check_answers(float answer_array[], struct answer ans[], int *score, int *correct, int *incorrect , int number_of_questions) {
 
+    // checks answers entered by the user before calculating result
+
     for (int i = 0; i < number_of_questions; i++) {
 
         if (ans[i].ans == answer_array[i]) {
@@ -66,11 +68,13 @@ void check_answers(float answer_array[], struct answer ans[], int *score, int *c
 
 void calculate_result(float answer_array[], struct answer ans[], int score, int correct, int incorrect, char name[] , int number_of_questions) {
 
+    // calculates result and writes to result.txt
+
     FILE* fp;
     time_t curr_time;
     time(&curr_time);
 
-    fp = fopen("result.txt", "a");
+    fp = fopen("data/result.txt", "a");
     if (!fp) {
 
         printf("ERROR writing to result file!\n");
@@ -102,10 +106,12 @@ void calculate_result(float answer_array[], struct answer ans[], int score, int 
 
 void display_history() {
 
+    //displays attempt history
+
     FILE* fp;
     char buffer[100];
 
-    fp = fopen("result.txt", "r");
+    fp = fopen("data/result.txt", "r");
     if (!fp) {
 
         printf("ERROR opening file for displaying results!\n");
@@ -123,6 +129,8 @@ void display_history() {
 
 void add_question() {
 
+    // adds questions , admin login required
+
     FILE* fp;
     char buffer[100];
 
@@ -135,7 +143,7 @@ void add_question() {
 
 }
 
-    fp = fopen("questions.txt", "a");
+    fp = fopen("data/questions.txt", "a");
 
     if (!fp) {
         perror("ERROR opening file for adding questions!");
@@ -154,7 +162,9 @@ void add_question() {
 
 void delete_history() {
 
-    FILE* fp = fopen("result.txt", "w");
+    // deletes attempt history , admin login required
+
+    FILE* fp = fopen("data/result.txt", "w");
     if (!fp) {
         perror("ERROR deleting contents of result file!");
         return;
@@ -168,6 +178,8 @@ void delete_history() {
 }
 
 void User_Interface(enum operations *opt) {
+
+    // MENU
 
     int option_selected;
 
@@ -199,6 +211,8 @@ void User_Interface(enum operations *opt) {
 
 void logic(enum operations opt, char name[], char correct_password[], struct answer ans[], float answer_array[], int *score, int *correct, int *incorrect , int number_of_questions , struct User user[] , int *userCount ) {
 
+    // state management
+    
     int admin_choice;
 
     if (opt == start) {

@@ -4,7 +4,7 @@
 
 void Load_Users(struct User user[], int *userCount)
 {
-    FILE *fp = fopen("users.txt", "r");
+    FILE *fp = fopen("data/users.txt", "r");
 
     if(fp == NULL)
     {
@@ -26,7 +26,7 @@ void Load_Users(struct User user[], int *userCount)
 
 void Save_Users ( struct User user[] , int userCount ) {
 
-    FILE* fp = fopen( "users.txt" , "w" );
+    FILE* fp = fopen( "data/users.txt" , "w" );
 
     if (!fp) {
     printf("ERROR opening file!\n");
